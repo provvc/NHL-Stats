@@ -1,0 +1,6 @@
+@NHLStatsAPI_HostAddress = http://localhost:5047
+
+GET {{NHLStatsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
