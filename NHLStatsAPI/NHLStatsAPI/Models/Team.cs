@@ -16,9 +16,8 @@ namespace NHLStatsAPI.Models {
         [JsonProperty("fullName")]
         public string name { get; set; }
 
-        //public string logoURL { get; set; }
-
-        //public int active { get; set; }
+        public virtual ICollection<TeamSeasonStatistics> TeamSeasonStatistics { get; set; }
+        public virtual ICollection<TeamGameStatistics> TeamGameStatistics { get; set; }
 
     }
 }

@@ -7,6 +7,15 @@ namespace NHLStatsAPI.Models
 
         public int playerSeasonStatisticsId { get; set; }
 
+        public int playerId { get; set; }
+
+        public int teamId { get; set; }
+
+        public int seasonId { get; set; }
+
+        public int gameTypeId { get; set; }
+
+
         public int assists { get; set; }
 
         [JsonProperty("avgToi")]
@@ -14,9 +23,6 @@ namespace NHLStatsAPI.Models
 
         [JsonProperty("faceoffWinningPctg")]
         public float faceoffWinningPctg { get; set; }
-
-        [JsonProperty("gameTypeId")]
-        public int gameTypeId { get; set; }
 
         [JsonProperty("gameWinningGoals")]
         public int gameWinningGoals { get; set; }
@@ -45,9 +51,6 @@ namespace NHLStatsAPI.Models
         [JsonProperty("powerPlayPoints")]
         public int powerPlayPoints { get; set; }
 
-        [JsonProperty("season")]
-        public int season { get; set; } // season id instead???
-
         [JsonProperty("shootingPctg")]
         public float shootingPctg { get; set; }
 
@@ -59,6 +62,13 @@ namespace NHLStatsAPI.Models
 
         [JsonProperty("shots")]
         public int shots { get; set; }
+
+
+        public virtual Player Player { get; set; }
+        public virtual Team Team { get; set; }
+        public virtual Season Season { get; set; }
+        public virtual GameType GameType { get; set; } // not sure if this is actually needed; we'll see I guess
+
 
     }
 }

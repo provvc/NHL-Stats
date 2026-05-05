@@ -6,6 +6,7 @@
         public int season { get; set; }
 
         public int startYear { get; set; }
+
         public int endYear { get; set; }
 
         public Season() {
